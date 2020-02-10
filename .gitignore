@@ -8,9 +8,13 @@ bin
 
 # Test binary, built with `go test -c`
 *.test
+__debug_bin
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# generated code
+*.pb.go
 
 # VSCode stuff
 .vscode

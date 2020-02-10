@@ -19,7 +19,7 @@ Path parameter with number of degrees celsius
 #### Return codes:
 - OK (200) is returned when ran successfully, with the body containing celsius/fahrenheit pair.
 - NotAcceptable (406) if path parameter can't be parsed to a float64
-- FailedDependency (424) if gRPC dependancy (grpc-server-fahrenheit) returned error
+- FailedDependency (424) if gRPC dependancy returned error
 - InternalServerError (500) is returned in case of general errors.
 
 ### /f2c/[:fahr]
@@ -31,7 +31,7 @@ Path parameter with number of degrees fahrenheit
 #### Return codes:
 - OK (200) is returned when ran successfully, with the body containing celsius/fahrenheit pair.
 - NotAcceptable (406) if path parameter can't be parsed to a float64
-- FailedDependency (424) if gRPC dependancy (grpc-server-fahrenheit) returned error
+- FailedDependency (424) if gRPC dependancy returned error
 - InternalServerError (500) is returned in case of general errors.
 
 ## Build
@@ -44,7 +44,8 @@ Path parameter with number of degrees fahrenheit
 - run 'make'
 
 ## Run
-'make run' from terminal
+- run grpc-server-fahrenheit
+- 'make run' from terminal
 
 ## Unit tests
 'make test' from terminal for unit tests

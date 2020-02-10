@@ -1,0 +1,5 @@
+export GRPC_WEB_PORT=4200
+
+# gRPC
+export GRPC_PORT=7777
+export GRPC_HOST=localhost
