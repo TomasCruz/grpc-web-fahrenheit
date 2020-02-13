@@ -27,7 +27,7 @@ func C2FHandler(c float64) http.HandlerFunc {
 
 		data, err := json.Marshal(DegreePair{C: c, F: f})
 		if err != nil {
-			err = errors.New("Something terrible happened")
+			err = errors.New("Something terrible happened with JSON marshalling")
 			errorResponse(w, err, http.StatusInternalServerError)
 			return
 		}

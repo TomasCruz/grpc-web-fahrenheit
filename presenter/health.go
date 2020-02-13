@@ -28,7 +28,7 @@ func HealthHandler(w http.ResponseWriter, r *http.Request) {
 
 	data, err := json.Marshal(Health{Status: statusString})
 	if err != nil {
-		err = errors.New("Something terrible happened")
+		err = errors.New("Something terrible happened with JSON marshalling")
 		errorResponse(w, err, http.StatusInternalServerError)
 		return
 	}
