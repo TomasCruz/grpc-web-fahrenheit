@@ -7,11 +7,13 @@ import (
 	"github.com/TomasCruz/grpc-web-fahrenheit/model"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
+	healthpb "google.golang.org/grpc/health/grpc_health_v1"
 )
 
 type grpcClient struct {
 	conn *grpc.ClientConn
 	c    api.ConvertorClient
+	h    healthpb.HealthClient
 }
 
 // InitializeClient establishes connection to gRCP server
@@ -23,6 +25,7 @@ func InitializeClient(host, port string) (client model.Client, err error) {
 	}
 
 	g.c = api.NewConvertorClient(g.conn)
+	g.h = healthpb.NewHealthClient(g.conn)
 	client = g
 
 	return
