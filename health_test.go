@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/TomasCruz/grpc-web-fahrenheit/presenter"
-	"gotest.tools/assert"
+	"gotest.tools/v3/assert"
 )
 
 func TestHealthOK(t *testing.T) {

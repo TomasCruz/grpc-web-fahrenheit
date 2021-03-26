@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/TomasCruz/grpc-web-fahrenheit/presenter"
-	"gotest.tools/assert"
+	"gotest.tools/v3/assert"
 )
 
 func TestC2F_OK(t *testing.T) {

@@ -1,13 +1,12 @@
 module github.com/TomasCruz/grpc-web-fahrenheit
 
-go 1.13
+go 1.16
 
 require (
-	github.com/golang/protobuf v1.3.3
+	github.com/golang/protobuf v1.5.1
 	github.com/pkg/errors v0.9.1
-	golang.org/x/net v0.0.0-20190424112056-4829fb13d2c6 // indirect
-	golang.org/x/sys v0.0.0-20190426135247-a129542de9ae // indirect
-	golang.org/x/text v0.3.2 // indirect
-	google.golang.org/grpc v1.27.1
-	gotest.tools v2.2.0+incompatible
+	golang.org/x/net v0.0.0-20210326060303-6b1517762897 // indirect
+	golang.org/x/text v0.3.5 // indirect
+	google.golang.org/grpc v1.36.1
+	gotest.tools/v3 v3.0.3
 )

@@ -7,7 +7,7 @@ clean:
 	go clean
 
 build:
-	go build -o bin/server
+	CGO_ENABLED=0 go build -o bin/server
 
 run:
 	bin/server
@@ -18,4 +18,4 @@ test:
 	go test -v -count=1 ./...
 
 integration:
-	go test -v -count=1 -tags integration ./...
+	CGO_ENABLED=0 go test -v -count=1 -tags integration ./...
